@@ -1,72 +1,55 @@
-# Rule-Based AI Chatbot
+# 🤖 Rule-Based AI Chatbot (Project 1)
 
-A small web chat UI backed by a **Flask** API. The bot uses a fixed dictionary of phrases (no ML). The frontend is a single-page interface served from the same app.
+This project is a simple **rule-based AI chatbot** developed as part of an Artificial Intelligence foundation project.
 
-## Features
+The chatbot responds to predefined user inputs using **dictionary-based logic** and provides an interactive **modern UI chat interface**.
 
-- Chat UI with dark/light theme (stored in the browser)
-- `POST /api/chat` returns JSON replies from predefined intents
-- Sending `exit` ends the session until the user clicks **Clear**
+---
 
-## Requirements
+## 🚀 Features
 
-- Python 3.10+ (recommended)
-- Dependencies listed in `requirements.txt`
+- 💬 Interactive chatbot UI (modern dark design)
+- 🔁 Continuous chat interaction
+- 🧠 Rule-based responses using JavaScript dictionary
+- 🧹 Input preprocessing (lowercase + trim)
+- ❓ Fallback response for unknown inputs
+- ⛔ Exit command to stop interaction
+- ⌨️ Press Enter to send message
+- 📱 Responsive design (works on mobile)
 
-## Local setup
+---
 
-From the project root (this folder):
+## 🛠️ Technologies Used
+- Python
+- HTML5
+- CSS3
+  
 
-```bash
-python -m venv .venv
-```
+---
 
-Activate the virtual environment (Windows PowerShell):
+## ⚙️ How It Works
 
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
+The chatbot follows a simple **Input → Process → Output (IPO)** model:
 
-Install dependencies:
+1. **Input**  
+   User enters a message.
 
-```bash
-pip install -r requirements.txt
-```
+2. **Processing**  
+   - Input is cleaned using `.toLowerCase().trim()`
+   - Checked against predefined responses using a dictionary
 
-Run the development server:
+3. **Output**  
+   - Matching response is displayed
+   - If not found → fallback message
 
-```bash
-python app.py
-```
+## 📌 Conclusion
 
-Open **http://127.0.0.1:5000** in your browser.
+This project demonstrates the **foundation of AI systems** using rule-based logic.  
+It is a starting point for building more advanced intelligent applications.
 
-### Production-style run (optional)
+---
 
-```bash
-gunicorn --bind 0.0.0.0:5000 app:app
-```
+## 👩‍💻 Author
 
-
-## Deploy on Render
-
-1. Push this repository to GitHub (or another Git provider Render supports).
-2. Create a **Web Service**, environment **Python**.
-3. **Build command:** `pip install -r requirements.txt`
-4. **Start command:** `gunicorn --bind 0.0.0.0:$PORT app:app`
-
-Ensure `app.py` and `index.html` stay at the **repository root** (or set Render’s root directory to match). On the free tier, the service may spin down when idle; the first request after idle can be slow.
-
-## Project layout
-
-```
-.
-├── app.py            # Flask app and rule-based responses
-├── index.html        # Chat UI (styles may be inline in this file)
-├── requirements.txt  # flask, gunicorn
-└── README.md
-```
-
-## License
-
-Add a license if you publish this project publicly.
+- Pugalini M.
+- Computer Engineering Undergraduate
