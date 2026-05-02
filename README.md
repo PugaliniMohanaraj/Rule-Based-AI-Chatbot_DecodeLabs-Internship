@@ -1,55 +1,87 @@
-# 🤖 Rule-Based AI Chatbot (Project 1)
+# 🤖 Rule-Based AI Chatbot
 
-This project is a simple **rule-based AI chatbot** developed as part of an Artificial Intelligence foundation project.
+A simple **rule-based AI chatbot** with a modern web UI, powered by a **Flask backend**.  
+The chatbot responds to predefined user inputs using dictionary-based logic (no machine learning).
 
-The chatbot responds to predefined user inputs using **dictionary-based logic** and provides an interactive **modern UI chat interface**.
+---
+
+## 🌐 Live Demo
+
+🔗 https://rule-based-ai-chatbot-decodelabs.onrender.com/
+
+> ⚠️ Note: This app is hosted on Render (free tier). It may take a few seconds to load after inactivity.
 
 ---
 
 ## 🚀 Features
 
-- 💬 Interactive chatbot UI (modern dark design)
+- 💬 Interactive chatbot UI
+- 🌗 Dark / Light theme (stored in browser)
 - 🔁 Continuous chat interaction
-- 🧠 Rule-based responses using JavaScript dictionary
+- 🧠 Rule-based responses (dictionary lookup)
 - 🧹 Input preprocessing (lowercase + trim)
 - ❓ Fallback response for unknown inputs
-- ⛔ Exit command to stop interaction
-- ⌨️ Press Enter to send message
-- 📱 Responsive design (works on mobile)
+- ⛔ Exit command to end session
+- 🔌 Flask API (`POST /api/chat`)
+- 📱 Responsive design
 
 ---
 
 ## 🛠️ Technologies Used
-- Python
+
+- Python (Flask)
 - HTML5
 - CSS3
-  
+- JavaScript
+- Gunicorn (for deployment)
 
 ---
 
 ## ⚙️ How It Works
 
-The chatbot follows a simple **Input → Process → Output (IPO)** model:
+The chatbot follows the **Input → Process → Output (IPO)** model:
 
 1. **Input**  
-   User enters a message.
+   User sends a message from the UI.
 
 2. **Processing**  
-   - Input is cleaned using `.toLowerCase().trim()`
-   - Checked against predefined responses using a dictionary
+   - Input is cleaned (`lowercase + trim`)
+   - Checked against predefined responses (dictionary)
 
 3. **Output**  
-   - Matching response is displayed
-   - If not found → fallback message
+   - Matching response is returned via Flask API
+   - If no match → fallback message
 
-## 📌 Conclusion
+---
+## 📂 Project Structure
 
-This project demonstrates the **foundation of AI systems** using rule-based logic.  
-It is a starting point for building more advanced intelligent applications.
+
+.
+├── app.py # Flask backend and chatbot logic
+├── index.html # Frontend UI
+├── requirements.txt # Dependencies (flask, gunicorn)
+├── README.md
+
 
 ---
 
-## 👩‍💻 Author
+## 🧪 API Endpoint
 
-- Pugalini M.
-- Computer Engineering Undergraduate
+### `POST /api/chat`
+
+🎯Learning Outcomes
+
+This project helps to understand:
+
+Rule-based AI systems
+Control flow and decision making
+Client-server communication (Frontend ↔ Backend)
+REST API basics
+UI/UX design for chat applications
+
+📌 Conclusion
+
+This project demonstrates the foundation of AI systems using rule-based logic and Flask-based API integration.
+It serves as a stepping stone for building more advanced intelligent applications.
+
+
